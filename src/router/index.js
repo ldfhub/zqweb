@@ -1,15 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '../components/header/header.vue'
 
+// 路由懒加载
+const Index = () =>import("@/views/index.vue")
+const SubSidy = () =>import("../views/subsidy.vue")
+const SubsidyDeatil = () =>import("../views/subsidydeatil.vue")
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path:'/',
-      name:'Header',
-      components:Header
+      name:"home",
+      component:Index
+    },
+    {
+      path:'/hezuo',
+      name:"subsidy",
+      component:SubSidy
+    },
+    {
+      path:'/news',
+      name:"SubsidyDeatil",
+      component:SubsidyDeatil
     }
   ],
   mode:'history'

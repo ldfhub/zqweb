@@ -12,18 +12,12 @@
         <nav>
           <ul class="navbar">
             <li>
-              <router-link to="/home">首&nbsp;&nbsp;&nbsp;&nbsp;页</router-link>
+              <router-link to="/">首&nbsp;&nbsp;&nbsp;&nbsp;页</router-link>
             </li>
             <li v-for="item in tabitems">
               <router-link :to="{path:item.path}">{{item.name}}
                 <i><img :src="url1"/></i>
               </router-link>
-              <!-- <ul class="dropdown">
-                <li>集团风采</li>
-                <li>集团风采</li>
-                <li>集团风采</li>
-                <li>集团风采</li>
-              </ul> -->
             </li>
           </ul>
         </nav>
